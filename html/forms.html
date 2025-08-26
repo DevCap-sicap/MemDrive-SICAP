@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registration Form</title>
         <link rel="stylesheet" href="../css/forms.css">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#0066cc">
         <script type="module" src="../javascript/forms.js"></script>
         <script>
             window.onload = function() {
@@ -168,5 +170,16 @@
                 <input type="submit" class="next-button" id="submit" value="Submit">
             </section>
         </form>
+
+      <script>
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", () => {
+            navigator.serviceWorker
+              .register("service-worker.js")
+              .then((reg) => console.log("Service Worker registered:", reg.scope))
+              .catch((err) => console.error("Service Worker registration failed:", err));
+          });
+        }
+      </script>
     </body>
 </html>

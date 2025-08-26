@@ -15,6 +15,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+import { enableIndexedDbPersistence } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+enableIndexedDbPersistence(db).catch((err) => {
+  if (err.code == 'failed-precondition') {
+    console.warn("Multiple tabs open, persistence only works in one tab.");
+  } else if (err.code == 'unimplemented') {
+    console.warn("Browser doesn't support persistence");
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const submitBtn = document.getElementById("submit");
@@ -50,3 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
