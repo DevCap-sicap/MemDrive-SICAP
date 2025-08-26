@@ -1,114 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurisu Development</title>
-    <link rel="stylesheet" href="../Css/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="">
+        <link rel="preconnect" href="" crossorigin>
+        <link href="" rel="stylesheet">
 
-</head>
-<body>
-    <header>
-        <a href="#home" class="portfolioLogo">
-            <img src="../Assets/KD-Logo.png" alt="Kurisu Development Logo">
-        </a>
+    </head>
+    <body>
+        <header>
+            <a href="#home" class="portfolioLogo">
+                <img src="" alt="">
+                <img src="" alt="">
+            </a>
 
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#samples">Samples</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header> 
-
-    <!-- Home Section -->
-    <section id="home">
-        <h1>Photography</h1>
-        <div class="content-container">
-            <img id="photo" src="../Assets/self-portrait.jpg" alt="Photo self">
-            <div class="info">
-                <p> 
-                    Hi! I Am Christian, a 3rd Year BS Computer Science student who loves Photography.<br>
-                    Currently the Head of Photoguild in RPG, I was an Associate Director for ComPub in Supreme Student Council (2014-2025)<br>
-                    and currently the Secretary for Operations in SICAP.
-                    <br>
-                    <br>
-                    Photography is capturing the moments that will last forever. An art that makes time stop and lets you see<br>
-                    the whole picture. Through my lens, I strive to capture the essence of moments, emotions, and stories that<br>
-                    would otherwise fade with time. Each photograph is a frozen moment in the continuous flow of life.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h1>About Me</h1>
-        <div class="content-container">
-            <div class="info">
-                <p> 
-                    I'm a passionate photographer and computer science student with a unique perspective that combines<br>
-                    technical knowledge with artistic vision. My journey in photography began 5 years ago when I first<br>
-                    picked up a camera, and since then I've developed a style that focuses on portrait and street photography.
-                    <br><br>
-                    My technical background in computer science gives me an edge in post-processing and digital workflow,<br>
-                    allowing me to enhance images while maintaining their authentic feel. I believe that the best photographs<br>
-                    are those that tell stories and evoke emotions.
-                    <br><br>
-                    When I'm not coding or taking pictures, you can find me exploring new places, attending photography<br>
-                    workshops, or mentoring aspiring photographers in our community.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Samples Section -->
-    <section id="samples">
-        <h1>My Work Samples</h1>
-        <div class="content-container">
-            <div class="info">
-                <p> 
-                    Here's a selection of my photography work that represents different styles and techniques I've mastered<br>
-                    over the years. Each image tells a unique story and captures a moment in time that can never be replicated.
-                </p>
-                <div class="samples-grid">
-                    <div class="sample-item">
-                        <img src="../Assets/photos/portrait.jpg" alt="Portrait Sample">
-                        <p>Portrait Photography</p>
+            <nav>
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#samples">Samples</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header> 
+        <form>
+            <!-- Introduction -->
+            <section id="Intro">
+                <h6>Data Privacy Act of 2012</h6>
+                <div class="content-container">
+                    <div class="info">
+                        <p> 
+                            In 2012, the Philippines passed Republic Act No. 10173 or the Data Privacy Act of 2012 (DPA) “to protect the 
+                            fundamental human right to privacy of communication while ensuring free flow of information to promote innovation and growth 
+                            and the State’s inherent obligation to ensure that personal information and communications systems in government and the private sector 
+                            are secured and protected.” By filling up this form, you agree with the terms and regulations promulgated in the Data Privacy Act.This question is required.*
+                        </p>
                     </div>
-                    <div class="sample-item">
-                        <img src="../Assets/photos/streetPhotog.jpg" alt="Street Sample">
-                        <p>Street Photography</p>
-                    </div>
-                    <div class="sample-item">
-                        <img src="../Assets/photos/nature.JPG" alt="Nature Sample">
-                        <p>Nature Photography</p>
-                    </div>
+                    <input type="checkbox" id="consent" name="consent" value="Agree">
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h1>Contact Me</h1>
-        <div class="content-container">
-            <div class="info">
-                <p> 
-                    Interested in working together or have questions about my work? Feel free to reach out!
-                </p>
-                <div class="contact-info">
-                    <p>Email: kurisitiyan.0611@gmail.com</p>
-                    <p>Phone: +63 995 007 9632</p>
-                    <p>Instagram: @kurisi.0611</p>
-                    <p>Location: Manila, Philippines</p>
-                </div>  
-            </div>
-        </div>
-    </section>
-</body>
+            <!-- Question 1 -->
+            <section id="personal-info">
+                <h6>Stuent's Personal Information</h6>
+                <div class="content-container">
+                    <div class="info">
+                        <p> 
+                            Name (Last Name, First Name, Middle Initial)
+                            <br>
+                            e.g. Dela Cruz, John, A.
+                        </p>
+                    </div>
+                    <input type="text" id="full-name" name="full-name" placeholder="Full Name">
+                </div>
+            </section>
+
+            <!-- Question 2 -->
+            <section id="student-id">
+                <h6>Student ID Number</h6>
+                <div class="content-container">
+                    <div class="info">
+                        <!--No <p>-->
+                    </div>
+                    <input type="text" id="student-id" name="student-id" placeholder="student-id">
+                </div>
+            </section>
+
+            <!-- Question 3 -->
+            <section id="course-year-level">
+                <h6>Course and Year Level</h6>
+                <div class="content-container">
+                    <div class="info">
+                        <p> 
+                            (e.g BSCS 3)
+                        </p>
+                    </div>
+                    <input type="text" id="course-and-year" name="course-and-year" placeholder="course-and-year">
+                </div>
+            </section>
+
+            <!-- Question 4 -->
+            <section id="committee-selection">
+                <h6>Committee Selection</h6>
+                <div class="content-container">
+                    <div class="info">
+                        <p> 
+                            Members are encouraged to be part of one (1) committee that will best help them 
+                            develop their skills, nurture their interests, and strengthen their connection with SICAP.
+                        </p>
+                    </div>
+                    <input type="radio" id="arts-and-music-committee" name="committee-selection" value="Arts and Music Committee">
+                    <label for="arts-and-music-committee">Arts and Music Committee</label><br>
+                    <input type="radio" id="documentation-committee" name="committee-selection" value="Documentation Committee">
+                    <label for="documentation-committee">Documentation Committee</label><br>
+                    <input type="radio" id="christian-living-committee" name="committee-selection" value="Christian Living Committee">
+                    <label for="christian-living-committee">Christian Living Committee</label>
+                    <input type="radio" id="it-committee" name="committee-selection" value="IT Committee">
+                    <label for="it-committee">IT Committee</label>
+                    
+                </div>
+            </section>
+
+            <!-- Question 5 -->
+            <section id="willingness">
+                <h6>If given the opportunity, are you willing to be an officer?</h6>
+                <div class="content-container">
+                    <input type="radio" id="willing" name="willingness" value = "Yes, I am willing">
+                    <label for="willing">Yes, I am willing</label><br>
+                    <input type="radio" id="maybe" name="willingness" value="Maybe, I'll consider it">
+                    <label for="maybe">Maybe, I'll consider it</label><br>
+                    <input type="radio" id="not-today" name="willingness" value="No, not this time">
+                    <label for="not-today">No, not this time</label>
+                </div>
+            </section>
+
+            <!-- Question 6 -->
+            <section id="facebook-name">
+                <h6>Facebook Name</h6>
+                <div class="content-container">
+                    <div class="info">
+                        <p> 
+                            This will be used to invite you to the official SICAP messenger community.
+                        </p>
+                    </div>
+                    <input type="text" id="course-and-year" name="course-and-year" placeholder="Course and Year">
+                </div>
+            </section>
+
+            <!-- Question 7 -->
+            <section id="payment-mode">
+                <h6>Mode of Payment</h6>
+                <div class="content-container">
+                    <div class="info">
+                        <p> 
+                            Please approach the SICAP officer assigned to assist you.
+                        </p>
+                    </div>
+                    <input type="radio" id="cash" name="payment-mode" value = "Cash">
+                    <label for="cash">Cash</label><br>
+                    <input type="radio" id="online-payment" name="payment-mode" value="Online Payment (GCASH)">
+                    <label for="online-payment">Online Payment (GCASH)</label><br>
+                </div>
+            </section>
+
+            <!-- Question 8 -->
+            <section id="amount-paid">
+                <h6>Amount Paid</h6>
+                <div class="content-container">
+                    <div class="info">
+                        <p> 
+                            Please enter the exact amount you paid.
+                        </p>
+                    </div>
+                    <input type="text" id="amount-paid" name="amount-paid" placeholder="Amount Paid">
+                </div>
+            </section>
+
+            <!-- Question 9 -->
+            <section id="payment-confirmation">
+                <h6>Payment ConfirmationThis question is required.*</h6>
+                <div class="content-container">
+                    <div class="info">
+                        <p> 
+                            Please confirm that you have completed the payment for this registration.
+                        </p>
+                    </div>
+                    <input type="checkbox" id="payment-confirmation" name="payment-confirmation" value="Payment Confirmation">
+                    <label for="payment-confirmation">I confirm that I have completed my payment.</label>
+                </div>
+            </section>
+        </form>
+    </body>
 </html>
