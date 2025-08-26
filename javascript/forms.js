@@ -132,7 +132,9 @@ const offlineManager = new OfflineManager();
 function areAllFieldsFilled() {
   // Required fields
   const consent = document.getElementById("consent").checked;
-  const fullName = document.getElementById("full-name").value.trim();
+  const lname = document.getElementById("lastname").value.trim();
+  const fname = document.getElementById("firstname").value.trim();
+  const minit = document.getElementById("middleinitial").value.trim();
   const studentId = document.getElementById("student-id").value.trim();
   const courseYear = document.getElementById("course-and-year").value.trim();
   const committee = document.querySelector("input[name='committee-selection']:checked");
@@ -143,7 +145,9 @@ function areAllFieldsFilled() {
   const paymentConfirmed = document.getElementById("payment-confirmation").checked;
 
   return consent &&
-         fullName &&
+         lname &&
+         fname &&
+         minit &&
          studentId &&
          courseYear &&
          committee &&
@@ -200,7 +204,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formData = {
       consent: document.getElementById("consent").checked,
-      fullName: document.getElementById("full-name").value,
+      lName: document.getElementById("lastname").value,
+      fName: document.getElementById("firstname").value,
+      minit: document.getElementById("middleinitial").value,
       studentId: document.getElementById("student-id").value,
       courseYear: document.getElementById("course-and-year").value,
       committee: document.querySelector("input[name='committee-selection']:checked").value,
