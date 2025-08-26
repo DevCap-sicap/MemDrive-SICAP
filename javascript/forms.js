@@ -1,8 +1,7 @@
-// Import Firebase SDKs (modular v9+ style)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
-// Your Firebase config (from your Firebase Console)
+// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyD23mN-ia7SaATIhzHXNMNKx7TrJ0V6NCk",
   authDomain: "membershipdrivesicap.firebaseapp.com",
@@ -13,17 +12,21 @@ const firebaseConfig = {
   measurementId: "G-J1D1BGHT8M"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Handle form submission
 document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
   const submitBtn = document.getElementById("submit");
 
-  submitBtn.addEventListener("click", async () => {
+  // remove any duplicate listeners
+  submitBtn.replaceWith(submitBtn.cloneNode(true));
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // stop page refresh
+    e.stopPropagation(); // stop bubbling
+
     try {
-      // Collect form values
       const formData = {
         consent: document.getElementById("consent").checked,
         fullName: document.getElementById("full-name").value,
@@ -31,21 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
         courseYear: document.getElementById("course-and-year").value,
         committee: document.querySelector("input[name='committee-selection']:checked")?.value || "",
         willingness: document.querySelector("input[name='willingness']:checked")?.value || "",
-        facebookName: document.querySelector("input[name='facebook-name']")?.value || "",
+        facebookName: document.getElementById("facebook-name")?.value || "",
         paymentMode: document.querySelector("input[name='payment-mode']:checked")?.value || "",
         amountPaid: document.getElementById("amount-paid").value,
         paymentConfirmed: document.getElementById("payment-confirmation").checked
       };
 
-      // Save to Firestore (collection: "registrations")
       await addDoc(collection(db, "registrations"), formData);
 
-      alert("Form submitted successfully");
+      alert("Form submitted successfully!");
+      form.reset();
     } catch (error) {
       console.error("Error submitting form: ", error);
-      alert("Error submitting form. Check console for details.");
+      alert("Error submitting form. Check console.");
     }
-
-    location.reload();
   });
 });
