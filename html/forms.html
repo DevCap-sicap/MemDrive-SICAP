@@ -11,78 +11,73 @@
 
     </head>
     <body>
-        <header>
-            <a href="#home" class="logo">
-                <img src="" alt="">
-                <img src="" alt="">
-            </a>
-
-        </header> 
         <form>
             <!-- Introduction -->
             <section id="Intro">
-                <h6>Data Privacy Act of 2012</h6>
                 <div class="content-container">
                     <div class="info">
-                        <p> 
+                        <p><strong>Data Privacy Act of 2012</strong><br>
                             In 2012, the Philippines passed Republic Act No. 10173 or the Data Privacy Act of 2012 (DPA) “to protect the 
                             fundamental human right to privacy of communication while ensuring free flow of information to promote innovation and growth 
                             and the State’s inherent obligation to ensure that personal information and communications systems in government and the private sector 
-                            are secured and protected.” By filling up this form, you agree with the terms and regulations promulgated in the Data Privacy Act.This question is required.*
+                            are secured and protected.” By filling up this form, you agree with the terms and regulations promulgated in the Data Privacy Act.
                         </p>
                     </div>
                     <input type="checkbox" id="consent" name="consent" value="Agree">
+                    <label for="consent">I Accept</label>
                 </div>
+
+
+                <a href="#personal-info"><input type="button" class="next-button" id="intro-next" value="Ok"></a>
             </section>
 
             <!--9 Questions below for Registration-->
 
             <!-- Question 1 -->
             <section id="personal-info">
-                <h6>Stuent's Personal Information</h6>
                 <div class="content-container">
                     <div class="info">
-                        <p> 
+                        <p><strong>Student's Personal Information</strong><br>
                             Name (Last Name, First Name, Middle Initial)
                             <br>
                             e.g. Dela Cruz, John, A.
                         </p>
                     </div>
-                    <input type="text" id="full-name" name="full-name" placeholder="Full Name">
+                    <input type="text" id="full-name" name="full-name" placeholder="Type your answer here...">
                 </div>
+                <a href="#student-id"><input type="button" class="next-button" id="intro-next" value="Next"></a>
             </section>
 
             <!-- Question 2 -->
             <section id="student-id">
-                <h6>Student ID Number</h6>
+                <strong>Student ID Number</strong><br>
                 <div class="content-container">
                     <div class="info">
-                        <!--No <p>-->
                     </div>
-                    <input type="text" id="student-id" name="student-id" placeholder="student-id">
+                    <input type="text" id="student-id" name="student-id" placeholder="Type your answer here...">
                 </div>
+                <a href="#course-year-level"><input type="button" class="next-button" id="intro-next" value="Next"></a>
             </section>
 
 
             <!-- Question 3 -->
             <section id="course-year-level">
-                <h6>Course and Year Level</h6>
                 <div class="content-container">
                     <div class="info">
-                        <p> 
+                        <p><strong>Course and Year Level</strong><br>
                             (e.g BSCS 3)
                         </p>
                     </div>
-                    <input type="text" id="course-and-year" name="course-and-year" placeholder="course-and-year">
+                    <input type="text" id="course-and-year" name="course-and-year" placeholder="Type your answer here...">
                 </div>
+                <a href="#committee-selection"><input type="button" class="next-button" id="intro-next" value="Next"></a>
             </section>
 
             <!-- Question 4 -->
             <section id="committee-selection">
-                <h6>Committee Selection</h6>
                 <div class="content-container">
                     <div class="info">
-                        <p> 
+                        <p><strong>Committee Selection</strong><br>
                             Members are encouraged to be part of one (1) committee that will best help them 
                             develop their skills, nurture their interests, and strengthen their connection with SICAP.
                         </p>
@@ -93,15 +88,16 @@
                     <label for="documentation-committee">Documentation Committee</label><br>
                     <input type="radio" id="christian-living-committee" name="committee-selection" value="Christian Living Committee">
                     <label for="christian-living-committee">Christian Living Committee</label>
+                    <br>
                     <input type="radio" id="it-committee" name="committee-selection" value="IT Committee">
                     <label for="it-committee">IT Committee</label>
-                    
                 </div>
+                <a href="#willingness"><input type="button" class="next-button" id="intro-next" value="Next"></a>
             </section>
 
             <!-- Question 5 -->
             <section id="willingness">
-                <h6>If given the opportunity, are you willing to be an officer?</h6>
+                <strong>If given the opportunity, are you willing to be an officer?</strong><br>
                 <div class="content-container">
                     <input type="radio" id="willing" name="willingness" value = "Yes, I am willing">
                     <label for="willing">Yes, I am willing</label><br>
@@ -110,27 +106,27 @@
                     <input type="radio" id="not-today" name="willingness" value="No, not this time">
                     <label for="not-today">No, not this time</label>
                 </div>
+                <a href="#facebook-name"><input type="button" class="next-button" id="intro-next" value="Next"></a>
             </section>
 
             <!-- Question 6 -->
             <section id="facebook-name">
-                <h6>Facebook Name</h6>
                 <div class="content-container">
                     <div class="info">
-                        <p> 
+                        <p><strong>Facebook Name</strong><br>
                             This will be used to invite you to the official SICAP messenger community.
                         </p>
                     </div>
-                    <input type="text" id="course-and-year" name="course-and-year" placeholder="Course and Year">
+                    <input type="text" id="course-and-year" name="course-and-year" placeholder="Type your answer here...">
                 </div>
+                <a href="#payment-mode"><input type="button" class="next-button" id="intro-next" value="Next"></a>
             </section>
 
             <!-- Question 7 -->
             <section id="payment-mode">
-                <h6>Mode of Payment</h6>
                 <div class="content-container">
                     <div class="info">
-                        <p> 
+                        <p><strong>Mode of Payment</strong><br>
                             Please approach the SICAP officer assigned to assist you.
                         </p>
                     </div>
@@ -139,33 +135,35 @@
                     <input type="radio" id="online-payment" name="payment-mode" value="Online Payment (GCASH)">
                     <label for="online-payment">Online Payment (GCASH)</label><br>
                 </div>
+                <a href="#amount-paid"><input type="button" class="next-button" id="intro-next" value="Next"></a>
             </section>
 
             <!-- Question 8 -->
             <section id="amount-paid">
-                <h6>Amount Paid</h6>
+                
                 <div class="content-container">
                     <div class="info">
-                        <p> 
+                        <p><strong>Amount Paid</strong><br> 
                             Please enter the exact amount you paid.
                         </p>
                     </div>
-                    <input type="text" id="amount-paid" name="amount-paid" placeholder="Amount Paid">
+                    <input type="text" id="amount-paid" name="amount-paid" placeholder="Type your answer here...">
                 </div>
+                <a href="#payment-confirmation"><input type="button" class="next-button" id="intro-next" value="Next"></a>
             </section>
 
             <!-- Question 9 -->
             <section id="payment-confirmation">
-                <h6>Payment ConfirmationThis question is required.*</h6>
                 <div class="content-container">
                     <div class="info">
-                        <p> 
+                        <p><strong>Payment ConfirmationThis question is required.*</strong><br> 
                             Please confirm that you have completed the payment for this registration.
                         </p>
                     </div>
                     <input type="checkbox" id="payment-confirmation" name="payment-confirmation" value="Payment Confirmation">
                     <label for="payment-confirmation">I confirm that I have completed my payment.</label>
                 </div>
+                <input type="button" class="next-button" id="submit" value="Submit">
             </section>
         </form>
     </body>

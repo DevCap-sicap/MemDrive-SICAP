@@ -1,3 +1,30 @@
+@font-face {
+    font-family: "ApercuPro-Regular";
+    src: url("../res/fonts/apercu_regular_pro.otf");
+}
+
+@font-face {
+    font-family: "ApercuPro-Medium";
+    src: url("../res/fonts/apercu_medium_pro.otf");
+}
+
+@font-face {
+    font-family: "ApercuPro-Bold";
+    src: url("../res/fonts/apercu_bold_pro.otf");
+}
+
+
+html{
+	scroll-behavior: smooth;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-color: #0445af white;
+}
+
+body{
+	font-family: ApercuPro-Regular;
+}
+
 form{
 	display: flex;
 	flex-direction: column;
@@ -7,12 +34,83 @@ form{
 	height: 100%;
 }
 
+strong{
+	font-size: 24px;
+	font-family: ApercuPro-Bold;
+}
+
 section{
-	border: 2px solid black;
+	margin-top: -50px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	width: 60%;
-	height: 100%;
+	align-items: flex-start;
+	justify-content: center;
+	width: 48%;
+	height: 100vh;
 }
+
+input[type="text"]{
+	font-size: 30px;
+	padding-bottom: 5px;
+	color: #0445af;
+	width: 50vw;
+	outline: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom-color: #b4c7e7;
+	transition: border-bottom-color 0.3s;
+}
+
+input[type="text"]:focus{
+	border-bottom-color: #0445af;
+}
+
+::placeholder{
+	color: #b4c7e7;
+}
+
+
+.next-button{
+	font-size: 30px;
+	margin-top: 20px;
+	border: 1px solid #0445af;
+	border-radius: 5px;
+	font-size: 23px;
+	color: white;
+	padding: 13px;
+	background: #0445af;
+}
+
+.content-container{
+	font-size: 24px;
+}
+
+
+#consent{
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	border: 1px solid #0445af;
+	display: inline-block;
+}
+
+label[for]{
+	align-self: center;
+	font-family: ApercuPro-Regular;
+	font-size: 19px;
+}
+
+input[type="radio"]{
+	cursor: pointer;
+}
+
+input[type="radio"] + label {
+	color: rgb(4, 69, 175);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+
+
