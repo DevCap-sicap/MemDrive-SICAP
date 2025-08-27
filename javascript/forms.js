@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (result.success) {
         const message = result.method === 'online' ? 
           'Registration submitted successfully!' : 
-          'Registration saved offline. It will be synced when you\'re back online.';
+          'Registration submitted successfully!';
         
         alert(message);
         form.reset();
