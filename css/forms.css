@@ -1,9 +1,6 @@
 html{
 	scroll-behavior: smooth;
-	overflow-y: auto;
-	overflow-x: hidden;
-	scrollbar-color: #0445af white;
-	scrollbar-width: thin;
+	overflow: hidden;
 }
 
 body{
@@ -65,11 +62,14 @@ input[type="text"]:focus{
 	color: #b4c7e7;
 }
 
+input{
+	transition: background 0.5s;
+}
 
-.next-button{
+.nav-button{
 	font-size: 30px;
 	margin-top: 20px;
-	border: 1px solid #0445af;
+	border: none;
 	border-radius: 5px;
 	font-size: 23px;
 	color: white;

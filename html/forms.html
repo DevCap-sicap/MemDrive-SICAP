@@ -8,6 +8,7 @@
         <link rel="manifest" href="../manifest.json">
         <meta name="theme-color" content="#0066cc">
         <script type="module" src="../javascript/forms.js"></script>
+        <script type="module" src="../javascript/forms_frontend.js"></script>
         <script>
             window.onload = function() {
                 window.scrollTo(0, 0);
@@ -30,9 +31,7 @@
                     <input type="checkbox" id="consent" name="consent" value="Agree">
                     <label for="consent">I Accept</label>
                 </div>
-
-
-                <a href="#personal-info"><input type="button" class="next-button" id="intro-next" value="Ok"></a>
+                <a href="#personal-info"><input type="button" class="nav-button" id="intro-next" value="Ok"></a>
             </section>
 
             <!--9 Questions below for Registration-->
@@ -57,7 +56,11 @@
                         </p>
                     </div>
                 </div>
-                <a href="#student-id-sec"><input type="button" class="next-button" id="intro-next" value="Next"></a>
+
+                <div>
+                    <a href="#Intro"><input type="button" class="nav-button" value="Previous"></a>
+                    <a href="#student-id-sec"><input type="button" class="nav-button" value="Next"></a>
+                </div>
             </section>
 
             <!-- Question 2 -->
@@ -68,7 +71,11 @@
                     </div>
                     <input type="text" id="student-id" name="student-id" placeholder="Type your answer here...">
                 </div>
-                <a href="#course-year-level"><input type="button" class="next-button" id="intro-next" value="Next"></a>
+
+                <div>
+                    <a href="#personal-info"><input type="button" class="nav-button" value="Previous"></a>
+                    <a href="#course-year-level"><input type="button" class="nav-button" id="intro-next" value="Next"></a>
+                </div>
             </section>
 
 
@@ -82,7 +89,11 @@
                     </div>
                     <input type="text" id="course-and-year" name="course-and-year" placeholder="Type your answer here...">
                 </div>
-                <a href="#committee-selection"><input type="button" class="next-button" id="intro-next" value="Next"></a>
+
+                <div>
+                    <a href="#student-id-sec"><input type="button" class="nav-button" value="Previous"></a>
+                    <a href="#committee-selection"><input type="button" class="nav-button" id="intro-next" value="Next"></a>
+                </div>
             </section>
 
             <!-- Question 4 -->
@@ -103,10 +114,15 @@
                     <br>
                     <input type="radio" id="it-committee" name="committee-selection" value="IT Committee">
                     <label for="it-committee">IT Committee</label>
+                    <br>
                     <input type="radio" id="no-choice" name="committee-selection" value="None">
                     <label for="it-committee">None</label>
                 </div>
-                <a href="#willingness"><input type="button" class="next-button" id="intro-next" value="Next"></a>
+
+                <div>
+                    <a href="#course-year-level"><input type="button" class="nav-button" value="Previous"></a>
+                    <a href="#willingness"><input type="button" class="nav-button" id="intro-next" value="Next"></a>
+                </div>
             </section>
 
             <!-- Question 5 -->
@@ -120,7 +136,10 @@
                     <input type="radio" id="not-today" name="willingness" value="No, not this time">
                     <label for="not-today">No, not this time</label>
                 </div>
-                <a href="#facebook-namesec"><input type="button" class="next-button" id="intro-next" value="Next"></a>
+                <div>
+                    <a href="#committee-selection"><input type="button" class="nav-button" value="Previous"></a>
+                    <a href="#facebook-namesec"><input type="button" class="nav-button" id="intro-next" value="Next"></a>
+                </div>
             </section>
 
             <!-- Question 6 -->
@@ -133,7 +152,10 @@
                     </div>
                     <input type="text" id="facebook-name" placeholder="Type your answer here...">
                 </div>
-                <a href="#payment-mode"><input type="button" class="next-button" id="intro-next" value="Next"></a>
+                <div>
+                    <a href="#Intro"><input type="button" class="nav-button" value="Previous"></a>
+                    <a href="#payment-mode"><input type="button" class="nav-button" id="intro-next" value="Next"></a>
+                </div>
             </section>
 
             <!-- Question 7 -->
@@ -149,7 +171,11 @@
                     <input type="radio" id="online-payment" name="payment-mode" value="Online Payment (GCASH)">
                     <label for="online-payment">Online Payment (GCASH)</label><br>
                 </div>
-                <a href="#amount-paidsec"><input type="button" class="next-button" id="intro-next" value="Next"></a>
+                <div>
+                    <a href="#facebook-namesec"><input type="button" class="nav-button" value="Previous"></a>
+                    <a href="#amount-paidsec"><input type="button" class="nav-button" id="intro-next" value="Next">
+                    </a>
+                </div>
             </section>
 
             <!-- Question 8 -->
@@ -163,7 +189,10 @@
                     </div>
                     <input type="text" id="amount-paid" name="amount-paid" placeholder="Type your answer here...">
                 </div>
-                <a href="#payment-confirmationsec"><input type="button" class="next-button" id="intro-next" value="Next"></a>
+                <div>
+                    <a href="#payment-mode"><input type="button" class="nav-button" value="Previous"></a>
+                    <a href="#payment-confirmationsec"><input type="button" class="nav-button" id="intro-next" value="Next"></a>
+                </div>
             </section>
 
             <!-- Question 9 -->
@@ -177,7 +206,10 @@
                     <input type="checkbox" id="payment-confirmation" name="payment-confirmation" value="Payment Confirmation">
                     <label for="payment-confirmation">I confirm that I have completed my payment.</label>
                 </div>
-                <input type="submit" class="next-button" id="submit" disabled="true" value="Submit">
+                <div>
+                    <a href="#amount-paidsec"><input type="button" class="nav-button" value="Previous"></a>
+                    <input type="submit" class="nav-button" id="submit" disabled="true" value="Submit">
+                </div>
             </section>
         </form>
 
