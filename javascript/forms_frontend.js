@@ -133,3 +133,10 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 });
+
+const returntohome = document.getElementById("return-to-home");
+returntohome.addEventListener("click", function(){
+      const form = document.querySelector("form");
+      form.reset();
+      window.close();
+});

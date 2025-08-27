@@ -8,6 +8,15 @@ body{
 	animation: fadein 3s ease 0s 1 normal forwards;
 }
 
+#return-to-home{
+	position: fixed;
+	top: 0;
+	left: 20px;
+	font-size: 24px;
+	color: #0445af;
+	cursor: pointer;
+}
+
 @keyframes fadein{
 	0%{
 		opacity: 0;
