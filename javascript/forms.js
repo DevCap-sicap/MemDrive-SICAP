@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         alert(message);
         form.reset();
-        window.location.href = "../index.html";
+        window.close();
       } else {
         throw new Error(result.error || 'Submission failed');
       }
