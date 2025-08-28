@@ -1,18 +1,18 @@
 const CACHE_NAME = "sicap-cache-v2"; // Updated version
 const OFFLINE_FILES = [
   "/",
-  "/index.html",
-  "./index.html", // Both relative and absolute paths
-  "/html/forms.html",
-  "./html/forms.html",
-  "/javascript/forms.js",
-  "./javascript/forms.js", 
-  "/css/forms.css",
-  "./css/forms.css",
-  "/css/index.css", 
-  "./css/index.css",
-  "/manifest.json",
-  "./manifest.json"
+  "index.html",
+  "index.html", // Both relative and absolute paths
+  "html/forms.html",
+  "html/forms.html",
+  "javascript/forms.js",
+  "javascript/forms.js", 
+  "css/forms.css",
+  "css/forms.css",
+  "css/index.css", 
+  "css/index.css",
+  "manifest.json",
+  "manifest.json"
 ];
 
 // Install event: cache core files
