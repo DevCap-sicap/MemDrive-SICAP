@@ -72,11 +72,11 @@ function checkSectionCompletion() {
     }
 
     // Section 9: Amount Paid - Check if amount field is filled
-    const amountPaid = document.getElementById('amount-paid');
+    const amountPaid = document.querySelectorAll('input[name="payment-amount"]');
     const amountNext = document.querySelector('#amount-paidsec .nav-button[value="Next"]');
     
-    if (amountPaid && amountNext) {
-        amountNext.disabled = amountPaid.value.trim() === '';
+    if (amountPaid.length > 0 && amountNext) {
+        amountNext.disabled = !(Array.from(amountPaid).some(radio => radio.checked));
     }
 }
 

@@ -141,7 +141,7 @@ function areAllFieldsFilled() {
   const willingness = document.querySelector("input[name='willingness']:checked");
   const facebookName = document.getElementById("facebook-name").value.trim();
   const paymentMode = document.querySelector("input[name='payment-mode']:checked");
-  const amountPaid = document.getElementById("amount-paid").value.trim();
+  const amountPaid = document.querySelector("input[name='payment-amount']:checked");
   const paymentConfirmed = document.getElementById("payment-confirmation").checked;
 
   return consent &&
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
       willingness: document.querySelector("input[name='willingness']:checked").value,
       facebookName: document.getElementById("facebook-name").value,
       paymentMode: document.querySelector("input[name='payment-mode']:checked").value,
-      amountPaid: document.getElementById("amount-paid").value,
+      amountPaid: document.querySelector("input[name='payment-amount']:checked").value,
       paymentConfirmed: document.getElementById("payment-confirmation").checked,
       timestamp: new Date()
     };
